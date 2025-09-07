@@ -1,323 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades de Inglês</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(120deg, #e3ecfa 0%, #f0f4fa 100%);
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividades de Inglês</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(120deg, #e3ecfa 0%, #f0f4fa 100%); margin: 0; padding: 0; }
+.container { max-width: 600px; margin: 32px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(46, 92, 154, 0.10); padding: 32px 24px 24px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+h1 { color: #2e5c9a; margin-bottom: 18px; font-size: 2.1rem; font-weight: 700; letter-spacing: 1px; }
+.slide-container { width: 100%; max-width: 500px; height: 320px; background: linear-gradient(120deg, #dde6f7 60%, #e3ecfa 100%); border-radius: 18px; margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(46, 92, 154, 0.10); position: relative; }
+.slide-img { width: 92%; height: 220px; object-fit: cover; border-radius: 12px; background: #fff; box-shadow: 0 2px 12px rgba(46, 92, 154, 0.10); margin-bottom: 14px; border: 2px solid #2e5c9a22; cursor: zoom-in; }
+.slide-btn { background: #2e5c9a; color: #fff; border: none; border-radius: 8px; padding: 8px 22px; margin: 0 10px; font-size: 1.08rem; cursor: pointer; font-weight: 500; box-shadow: 0 1px 4px rgba(46, 92, 154, 0.07); transition: background 0.3s, transform 0.2s; }
+.slide-btn:hover { background: #184075; transform: scale(1.07); }
+.title { text-align: center; background: linear-gradient(90deg, #2e5c9a 60%, #184075 100%); color: white; padding: 18px 0 10px 0; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10); border-radius: 0 0 18px 18px; }
+.title img { width: 70px; height: 70px; border-radius: 50%; margin-bottom: 8px; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10); }
+.atividade-box { background: #e3ecfa; border-radius: 12px; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.08); padding: 22px 28px; margin: 24px auto 0 auto; max-width: 500px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.atividade-titulo { font-size: 1.25rem; font-weight: 700; color: #2e5c9a; margin-bottom: 2px; }
+.atividade-descricao { font-size: 1.08rem; color: #184075; }
+.atividade-exemplo { font-size: 1.05rem; color: #2e5c9a; background: #dde6f7; border-radius: 8px; padding: 8px 12px; margin-top: 6px; }
+.mistica { background: linear-gradient(90deg, #e3ecfa 60%, #dde6f7 100%); border-radius: 10px; padding: 14px; margin-top: 24px; color: #2e5c9a; font-weight: bold; text-align: center; font-size: 1.1rem; box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07); transition: background 0.5s; cursor: default; }
+.card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; width: 100%; margin-top: 24px; }
+.card { background: #dde6f7; border-radius: 12px; padding: 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(46,92,154,0.15); }
+.card img { max-width: 100%; border-radius: 8px; margin-bottom: 6px; }
+.card-title { font-weight: 700; color: #2e5c9a; margin-bottom: 4px; }
+.card-desc { font-size: 0.9rem; color: #184075; }
+.modal, .modal-imagem { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(46,92,154,0.45); align-items: center; justify-content: center; }
+.modal.ativo, .modal-imagem.ativo { display: flex; }
+.modal-content, .imagem-ampliada { background: #fff; border-radius: 16px; padding: 20px; max-width: 90%; max-height: 80%; overflow-y: auto; box-shadow: 0 8px 32px rgba(46,92,154,0.2); }
+.modal-close { position: absolute; top: 12px; right: 18px; font-size: 1.5rem; cursor: pointer; }
+.copyright { text-align: center; font-size: 1rem; color: #2e5c9a; margin-top: 40px; margin-bottom: 18px; background: #e3ecfa; border-radius: 8px; padding: 10px 0; box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07); }
 
-        .container {
-            max-width: 600px;
-            margin: 32px auto 0 auto;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(46, 92, 154, 0.10);
-            padding: 32px 24px 24px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+.title img { width:70px; height:70px; border-radius:50%; margin-bottom:8px; }
+.container { max-width:1000px; margin:24px auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px; }
 
-        h1 {
-            color: #2e5c9a;
-            margin-bottom: 18px;
-            font-size: 2.1rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        ul {
-            margin-top: 18px;
-            padding: 0;
-            list-style: none;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        li {
-            background: #e3ecfa;
-            color: #2e5c9a;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-size: 1.08rem;
-            box-shadow: 0 1px 4px rgba(46, 92, 154, 0.05);
-        }
-
-        .mistica {
-            background: linear-gradient(90deg, #e3ecfa 60%, #dde6f7 100%);
-            border-radius: 10px;
-            padding: 14px;
-            margin-top: 24px;
-            color: #2e5c9a;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1rem;
-            box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07);
-            transition: background 0.5s;
-        }
-
-        .copyright {
-            text-align: center;
-            font-size: 1rem;
-            color: #2e5c9a;
-            margin-top: 40px;
-            margin-bottom: 18px;
-            background: #e3ecfa;
-            border-radius: 8px;
-            padding: 10px 0;
-            box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07);
-        }
-
-        .slide-container {
-            width: 100%;
-            max-width: 500px;
-            height: 320px;
-            background: linear-gradient(120deg, #dde6f7 60%, #e3ecfa 100%);
-            border-radius: 18px;
-            margin: 0 auto 32px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 18px rgba(46, 92, 154, 0.10);
-            position: relative;
-        }
-
-        .slide-img {
-            width: 92%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 12px;
-            background: #fff;
-            box-shadow: 0 2px 12px rgba(46, 92, 154, 0.10);
-            margin-bottom: 14px;
-            border: 2px solid #2e5c9a22;
-        }
-
-        .slide-btn {
-            background: #2e5c9a;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 8px 22px;
-            margin: 0 10px;
-            font-size: 1.08rem;
-            cursor: pointer;
-            font-weight: 500;
-            box-shadow: 0 1px 4px rgba(46, 92, 154, 0.07);
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .slide-btn:hover {
-            background: #184075;
-            transform: scale(1.07);
-        }
-
-        .title {
-            text-align: center;
-            background: linear-gradient(90deg, #2e5c9a 60%, #184075 100%);
-            color: white;
-            padding: 18px 0 10px 0;
-            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10);
-            border-radius: 0 0 18px 18px;
-        }
-
-        .title img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin-bottom: 8px;
-            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10);
-        }
-
-        .a {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        .atividade-box {
-            background: #e3ecfa;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.08);
-            padding: 22px 28px;
-            margin: 24px auto 0 auto;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .atividade-titulo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #2e5c9a;
-            margin-bottom: 2px;
-        }
-
-        .atividade-descricao {
-            font-size: 1.08rem;
-            color: #184075;
-        }
-
-        .atividade-exemplo {
-            font-size: 1.05rem;
-            color: #2e5c9a;
-            background: #dde6f7;
-            border-radius: 8px;
-            padding: 8px 12px;
-            margin-top: 6px;
-        }
-
-        .modal-imagem {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(46, 92, 154, 0.45);
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.3s;
-        }
-
-        .modal-imagem.ativo {
-            display: flex;
-            opacity: 1;
-        }
-
-        .imagem-ampliada {
-            max-width: 90vw;
-            max-height: 80vh;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(46, 92, 154, 0.18);
-            background: #fff;
-            border: 4px solid #dde6f7;
-            object-fit: contain;
-        }
-    </style>
-
+.modal-close { float:right; font-size:1.5rem; cursor:pointer; }
+</style>
 </head>
-
 <body>
-    <div class="title">
-        <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="">
-        <!-- <h1 class="a">Atividades de Inglês</h1> -->
-    </div>
-    <div class="container">
-        <div class="slide-container">
-            <!-- <img id="slideImg" class="slide-img" src="https://via.placeholder.com/400x220?text=Imagem+1" alt="Slide"> -->
-            <img id="slideImg" class="slide-img" src="https://via.placeholder.com/400x220?text=Imagem+1" alt="Slide"
-                onclick="abrirModalImagem()" style="cursor:zoom-in;">
-            <div>
-                <button class="slide-btn" onclick="slideAnterior()">Anterior</button>
-                <div id="modalImagem" class="modal-imagem" onclick="fecharModalImagem()">
-                    <img id="imagemAmpliada" class="imagem-ampliada" src="" alt="Imagem Ampliada">
-                </div>
-                <button class="slide-btn" onclick="slideProxima()">Próxima</button>
-            </div>
 
+<div class="title">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
+</div>
+
+<div class="container" style="max-width:600px; margin:32px auto; background:#fff; border-radius:16px; box-shadow:0 4px 24px rgba(46,92,154,0.10); padding:32px 24px 24px 24px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="slide-container">
+        <img id="slideImg" class="slide-img" src="https://via.placeholder.com/400x220?text=Imagem+1" alt="Slide" onclick="abrirModalImagem()">
+        <div>
+            <button class="slide-btn" onclick="slideAnterior()">Anterior</button>
+            <button class="slide-btn" onclick="slideProxima()">Próxima</button>
         </div>
-        <!-- <input type="text" id="atividadeInput" placeholder="Digite uma atividade..."> -->
-        <!-- <button onclick="adicionarAtividade()">Adicionar</button> -->
-
-        <!-- <ul id="ul" style="align-self:center; max-width:800px;"></ul> -->
-        <div class="atividade-box">
-               <div class="atividade-titulo">Atividade</div>
-            <div class="atividade-descricao">Página 54.</div>
-            <div class="atividade-exemplo"><strong>,</strong>
-            </div>
-        </div>
-
-        <div class="mistica" id="misticaBox">Clique abaixo para uma mensagem mística!</div>
-        <button class="slide-btn" style="margin-top:12px;" onclick="misticaMensagem()">Mensagem Mística</button>
     </div>
-    <div class="copyright">
-        &copy; 2025 Kaio. Todos os direitos reservados. Proibida a reprodução sem autorização.
+
+    <div class="atividade-box">
+        <div class="atividade-titulo">Atividade</div>
+        <div class="atividade-descricao">Página 54.</div>
+        <div class="atividade-exemplo"><strong>Exemplo:</strong> Traduza as palavras do slide.</div>
     </div>
-    <script>
-        // Slide de imagens
-        const imagens = [
-            '1.jpg',
-            '2.jpg',
-            // 'https://via.placeholder.com/400x220?text=Imagem+3'
-        ];
-        let slideAtual = 0;
-        function atualizarSlide() {
-            document.getElementById('slideImg').src = imagens[slideAtual];
-        }
-        function slideAnterior() {
-            slideAtual = (slideAtual - 1 + imagens.length) % imagens.length;
-            atualizarSlide();
-        }
-        function slideProxima() {
-            slideAtual = (slideAtual + 1) % imagens.length;
-            atualizarSlide();
-        }
-        function adicionarAtividade() {
-            const input = document.getElementById('atividadeInput');
-            const lista = document.getElementById('ul');
-            if (input.value.trim() !== '') {
-                const li = document.createElement('li');
-                li.textContent = input.value;
-                lista.appendChild(li);
-                input.value = '';
-            }
-        }
 
-        function misticaMensagem() {
-            const mensagens = [
-                'Acredite no seu potencial!',
-                'O universo conspira a favor dos que se dedicam.',
-                'Cada palavra aprendida é uma porta aberta.',
-                'Seu esforço será recompensado!',
-                'A jornada do inglês é cheia de descobertas místicas.',
-                'Acredite no seu potencial!',
-                'O universo conspira a favor dos que se dedicam.',
-                'Cada palavra aprendida é uma porta aberta.',
-                'Seu esforço será recompensado!',
-                'A jornada do inglês é cheia de descobertas místicas.'
+    <div class="mistica" id="misticaBox">Clique abaixo para uma mensagem mística!</div>
+    <button class="slide-btn" style="margin-top:12px;" onclick="misticaMensagem()">Mensagem Mística</button>
 
-            ];
-            const misticaBox = document.getElementById('misticaBox');
-            const msg = mensagens[Math.floor(Math.random() * mensagens.length)];
-            misticaBox.textContent = msg;
-            misticaBox.style.background = '#d1e7dd';
-            setTimeout(() => {
-                misticaBox.style.background = '#e3ecfa';
-            }, 1500);
-        }
+    <div class="card-container" id="cardsContainer"></div>
+</div>
 
-        // Modal de imagem ampliada
-        function abrirModalImagem() {
-            const slideImg = document.getElementById('slideImg');
-            const modal = document.getElementById('modalImagem');
-            const imgAmpliada = document.getElementById('imagemAmpliada');
-            imgAmpliada.src = slideImg.src;
-            modal.classList.add('ativo');
+<div class="title">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
+    <h1>Estudo de Inglês - 100 Cards</h1>
+</div>
+<div class="container" id="cardsContainer"></div>
+
+<div id="modal" class="modal" onclick="fecharModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="modal-close" onclick="fecharModal()">&times;</span>
+        <div id="modalContent"></div>
+    </div>
+</div>
+<div id="modalImagem" class="modal-imagem" onclick="fecharModalImagem()">
+    <img id="imagemAmpliada" class="imagem-ampliada" src="" alt="Imagem Ampliada">
+</div>
+
+<div class="copyright">
+    &copy; 2025 Kaio. Todos os direitos reservados. Proibida a reprodução sem autorização.
+</div>
+
+<script>
+// Slides
+const imagens = [
+    '1.jpg',
+    '2.jpg'
+];
+let slideAtual = 0;
+function atualizarSlide() { document.getElementById('slideImg').src = imagens[slideAtual]; }
+function slideAnterior() { slideAtual = (slideAtual - 1 + imagens.length) % imagens.length; atualizarSlide(); }
+function slideProxima() { slideAtual = (slideAtual + 1) % imagens.length; atualizarSlide(); }
+
+// Mensagem mística
+function misticaMensagem() {
+    const mensagens = [
+        'Acredite no seu potencial!',
+        'O universo conspira a favor dos que se dedicam.',
+        'Cada palavra aprendida é uma porta aberta.',
+        'Seu esforço será recompensado!',
+        'A jornada do inglês é cheia de descobertas místicas.'
+    ];
+    const msg = mensagens[Math.floor(Math.random() * mensagens.length)];
+    const misticaBox = document.getElementById('misticaBox');
+    misticaBox.textContent = msg;
+    misticaBox.style.background = '#d1e7dd';
+    setTimeout(() => misticaBox.style.background = '#e3ecfa', 1500);
+}
+
+// Modal de cards
+function abrirModal(conteudo) { document.getElementById('modalContent').innerHTML = conteudo; document.getElementById('modal').classList.add('ativo'); }
+function fecharModal() { document.getElementById('modal').classList.remove('ativo'); }
+
+// Modal de imagem
+function abrirModalImagem() { 
+    document.getElementById('imagemAmpliada').src = document.getElementById('slideImg').src; 
+    document.getElementById('modalImagem').classList.add('ativo'); 
+}
+function fecharModalImagem() { document.getElementById('modalImagem').classList.remove('ativo'); }
+
+// Lista de 100 temas importantes
+let temas = [
+  {word:'Present Simple', tipo:'Gramática'},
+  {word:'Past Simple', tipo:'Gramática'},
+  {word:'Future Simple', tipo:'Gramática'},
+  {word:'Present Continuous', tipo:'Gramática'},
+  {word:'Past Continuous', tipo:'Gramática'},
+  {word:'Future Continuous', tipo:'Gramática'},
+  {word:'Present Perfect', tipo:'Gramática'},
+  {word:'Past Perfect', tipo:'Gramática'},
+  {word:'Future Perfect', tipo:'Gramática'},
+  {word:'Present Perfect Continuous', tipo:'Gramática'},
+  {word:'Past Perfect Continuous', tipo:'Gramática'},
+  {word:'Future Perfect Continuous', tipo:'Gramática'},
+  {word:'Passive Voice', tipo:'Gramática'},
+  {word:'Reported Speech', tipo:'Gramática'},
+  {word:'Conditionals Type 0', tipo:'Gramática'},
+  {word:'Conditionals Type 1', tipo:'Gramática'},
+  {word:'Conditionals Type 2', tipo:'Gramática'},
+  {word:'Conditionals Type 3', tipo:'Gramática'},
+  {word:'Articles', tipo:'Gramática'},
+  {word:'Prepositions', tipo:'Gramática'},
+  {word:'Food', tipo:'Vocabulário'},
+  {word:'Animals', tipo:'Vocabulário'},
+  {word:'Clothing', tipo:'Vocabulário'},
+  {word:'Weather', tipo:'Vocabulário'},
+  {word:'Transportation', tipo:'Vocabulário'},
+  {word:'House', tipo:'Vocabulário'},
+  {word:'School', tipo:'Vocabulário'},
+  {word:'Jobs', tipo:'Vocabulário'},
+  {word:'Family', tipo:'Vocabulário'},
+  {word:'Colors', tipo:'Vocabulário'},
+  {word:'Numbers', tipo:'Vocabulário'},
+  {word:'Days of the Week', tipo:'Vocabulário'},
+  {word:'Months', tipo:'Vocabulário'},
+  {word:'Emotions', tipo:'Vocabulário'},
+  {word:'Sports', tipo:'Vocabulário'},
+  {word:'Body Parts', tipo:'Vocabulário'},
+  {word:'Countries', tipo:'Vocabulário'},
+  {word:'Cities', tipo:'Vocabulário'},
+  {word:'Technology', tipo:'Vocabulário'},
+  {word:'Nature', tipo:'Vocabulário'},
+  {word:'Break the ice', tipo:'Expressões'},
+  {word:'Piece of cake', tipo:'Expressões'},
+  {word:'Hit the sack', tipo:'Expressões'},
+  {word:'Let the cat out of the bag', tipo:'Expressões'},
+  {word:'Once in a blue moon', tipo:'Expressões'},
+  {word:'Costs an arm and a leg', tipo:'Expressões'},
+  {word:'Bite the bullet', tipo:'Expressões'},
+  {word:'Cutting corners', tipo:'Expressões'},
+  {word:'On cloud nine', tipo:'Expressões'},
+  {word:'Under the weather', tipo:'Expressões'},
+  {word:'Look up', tipo:'Phrasal Verbs'},
+  {word:'Get along', tipo:'Phrasal Verbs'},
+  {word:'Give up', tipo:'Phrasal Verbs'},
+  {word:'Run into', tipo:'Phrasal Verbs'},
+  {word:'Take off', tipo:'Phrasal Verbs'},
+  {word:'Put off', tipo:'Phrasal Verbs'},
+  {word:'Carry on', tipo:'Phrasal Verbs'},
+  {word:'Check out', tipo:'Phrasal Verbs'},
+  {word:'Come across', tipo:'Phrasal Verbs'},
+  {word:'Hold on', tipo:'Phrasal Verbs'},
+  {word:'How are you?', tipo:'Frases'},
+  {word:'Nice to meet you', tipo:'Frases'},
+  {word:'I don’t understand', tipo:'Frases'},
+  {word:'Can you help me?', tipo:'Frases'},
+  {word:'What time is it?', tipo:'Frases'},
+  {word:'I’m hungry', tipo:'Frases'},
+  {word:'I’m tired', tipo:'Frases'},
+  {word:'I love you', tipo:'Frases'},
+  {word:'See you later', tipo:'Frases'},
+  {word:'Have a nice day', tipo:'Frases'},
+  {word:'Beautiful', tipo:'Adjetivos'},
+  {word:'Happy', tipo:'Adjetivos'},
+  {word:'Sad', tipo:'Adjetivos'},
+  {word:'Big', tipo:'Adjetivos'},
+  {word:'Small', tipo:'Adjetivos'},
+  {word:'Fast', tipo:'Adjetivos'},
+  {word:'Slow', tipo:'Adjetivos'},
+  {word:'Hot', tipo:'Adjetivos'},
+  {word:'Cold', tipo:'Adjetivos'},
+  {word:'Interesting', tipo:'Adjetivos'},
+  {word:'Go', tipo:'Verbos'},
+  {word:'Come', tipo:'Verbos'},
+  {word:'Eat', tipo:'Verbos'},
+  {word:'Drink', tipo:'Verbos'},
+  {word:'Read', tipo:'Verbos'},
+  {word:'Write', tipo:'Verbos'},
+  {word:'Speak', tipo:'Verbos'},
+  {word:'Listen', tipo:'Verbos'},
+  {word:'Run', tipo:'Verbos'},
+  {word:'Walk', tipo:'Verbos'},
+  {word:'School subjects', tipo:'Temas Gerais'},
+  {word:'Hobbies', tipo:'Temas Gerais'},
+  {word:'Shopping', tipo:'Temas Gerais'},
+  {word:'Health', tipo:'Temas Gerais'},
+  {word:'Travel', tipo:'Temas Gerais'},
+  {word:'Movies', tipo:'Temas Gerais'},
+  {word:'Music', tipo:'Temas Gerais'},
+  {word:'Books', tipo:'Temas Gerais'},
+  {word:'Internet', tipo:'Temas Gerais'},
+  {word:'Culture', tipo:'Temas Gerais'},
+  {word:'Excuse me', tipo:'Frases'},
+  {word:'I’m sorry', tipo:'Frases'},
+  {word:'Thank you', tipo:'Frases'},
+  {word:'You’re welcome', tipo:'Frases'},
+  {word:'No problem', tipo:'Frases'},
+  {word:'Good morning', tipo:'Frases'},
+  {word:'Good night', tipo:'Frases'},
+  {word:'See you soon', tipo:'Frases'},
+  {word:'Take care', tipo:'Frases'},
+  {word:'Happy birthday', tipo:'Frases'}
+];
+
+// Explicações manuais
+const explicacoes = {
+    'Past Simple':'Tempo verbal usado para ações concluídas no passado.',
+    'Present Simple':'Hábitos, fatos gerais e verdades universais.',
+    'Future Simple':'Ações futuras.',
+    'Present Continuous':'Ações que estão acontecendo agora.',
+    'Past Continuous':'Ações contínuas no passado.',
+    'Future Continuous':'Ações contínuas no futuro.',
+    'Present Perfect':'Ações passadas com ligação ao presente.',
+    'Past Perfect':'Ações concluídas antes de outra ação passada.',
+    'Future Perfect':'Ações que estarão concluídas no futuro.',
+    'Passive Voice':'Estrutura de voz passiva.',
+    'Reported Speech':'Discurso indireto.',
+    'Conditionals Type 0':'Condição real e geral.',
+    'Conditionals Type 1':'Situação real futura.',
+    'Conditionals Type 2':'Situação hipotética presente/futura.',
+    'Conditionals Type 3':'Situação hipotética passada.'
+};
+
+// Criar cards
+async function criarCards(temas){
+    const container=document.getElementById('cardsContainer');
+    container.innerHTML='';
+    for(const obj of temas){
+        const card=document.createElement('div'); card.className='card';
+        card.innerHTML=`<div class="card-title">${obj.word}</div><div class="card-desc">${obj.tipo}</div>`;
+        card.onclick=()=>buscarDefinicao(obj.word,obj.tipo);
+        container.appendChild(card);
+    }
+}
+
+// Buscar definição ou usar explicação manual
+async function buscarDefinicao(palavra,tipo){
+    try {
+        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${palavra}`);
+        const data = await res.json();
+        if(data[0] && data[0].meanings){
+            let defs = data[0].meanings.map(m => m.definitions[0].definition).join('<br>');
+            let exemplos = data[0].meanings.map(m => m.definitions[0].example).filter(e => e).join('<br>');
+            abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${defs}<br>${exemplos}`);
+        } else {
+            abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${explicacoes[palavra] || 'Definição não encontrada.'}`);
         }
-        function fecharModalImagem() {
-            document.getElementById('modalImagem').classList.remove('ativo');
-        }
-    </script>
+    } catch(e){
+        abrirModal(`<strong>${palavra}</strong> (${tipo})<br>Erro ao buscar definição.`);
+    }
+}
+
+// Modal
+function abrirModal(conteudo){
+    document.getElementById('modalContent').innerHTML=conteudo;
+    document.getElementById('modal').classList.add('ativo');
+}
+function fecharModal(){ document.getElementById('modal').classList.remove('ativo'); }
+
+// Inicializa
+criarCards(temas);
+</script>
+
 </body>
-
-
 </html>
-
-
-
