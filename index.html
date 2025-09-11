@@ -1,317 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atividades de Inglês</title>
-<style>
-body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(120deg, #e3ecfa 0%, #f0f4fa 100%); margin: 0; padding: 0; }
-.container { max-width: 600px; margin: 32px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(46, 92, 154, 0.10); padding: 32px 24px 24px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-h1 { color: #2e5c9a; margin-bottom: 18px; font-size: 2.1rem; font-weight: 700; letter-spacing: 1px; }
-.slide-container { width: 100%; max-width: 500px; height: 320px; background: linear-gradient(120deg, #dde6f7 60%, #e3ecfa 100%); border-radius: 18px; margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(46, 92, 154, 0.10); position: relative; }
-.slide-img { width: 92%; height: 220px; object-fit: cover; border-radius: 12px; background: #fff; box-shadow: 0 2px 12px rgba(46, 92, 154, 0.10); margin-bottom: 14px; border: 2px solid #2e5c9a22; cursor: zoom-in; }
-.slide-btn { background: #2e5c9a; color: #fff; border: none; border-radius: 8px; padding: 8px 22px; margin: 0 10px; font-size: 1.08rem; cursor: pointer; font-weight: 500; box-shadow: 0 1px 4px rgba(46, 92, 154, 0.07); transition: background 0.3s, transform 0.2s; }
-.slide-btn:hover { background: #184075; transform: scale(1.07); }
-.title { text-align: center; background: linear-gradient(90deg, #2e5c9a 60%, #184075 100%); color: white; padding: 18px 0 10px 0; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10); border-radius: 0 0 18px 18px; }
-.title img { width: 70px; height: 70px; border-radius: 50%; margin-bottom: 8px; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10); }
-.atividade-box { background: #e3ecfa; border-radius: 12px; box-shadow: 0 2px 10px rgba(46, 92, 154, 0.08); padding: 22px 28px; margin: 24px auto 0 auto; max-width: 500px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-.atividade-titulo { font-size: 1.25rem; font-weight: 700; color: #2e5c9a; margin-bottom: 2px; }
-.atividade-descricao { font-size: 1.08rem; color: #184075; }
-.atividade-exemplo { font-size: 1.05rem; color: #2e5c9a; background: #dde6f7; border-radius: 8px; padding: 8px 12px; margin-top: 6px; }
-.mistica { background: linear-gradient(90deg, #e3ecfa 60%, #dde6f7 100%); border-radius: 10px; padding: 14px; margin-top: 24px; color: #2e5c9a; font-weight: bold; text-align: center; font-size: 1.1rem; box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07); transition: background 0.5s; cursor: default; }
-.card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; width: 100%; margin-top: 24px; }
-.card { background: #dde6f7; border-radius: 12px; padding: 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(46,92,154,0.15); }
-.card img { max-width: 100%; border-radius: 8px; margin-bottom: 6px; }
-.card-title { font-weight: 700; color: #2e5c9a; margin-bottom: 4px; }
-.card-desc { font-size: 0.9rem; color: #184075; }
-.modal, .modal-imagem { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(46,92,154,0.45); align-items: center; justify-content: center; }
-.modal.ativo, .modal-imagem.ativo { display: flex; }
-.modal-content, .imagem-ampliada { background: #fff; border-radius: 16px; padding: 20px; max-width: 90%; max-height: 80%; overflow-y: auto; box-shadow: 0 8px 32px rgba(46,92,154,0.2); }
-.modal-close { position: absolute; top: 12px; right: 18px; font-size: 1.5rem; cursor: pointer; }
-.copyright { text-align: center; font-size: 1rem; color: #2e5c9a; margin-top: 40px; margin-bottom: 18px; background: #e3ecfa; border-radius: 8px; padding: 10px 0; box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07); }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Inglês</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #e3ecfa 0%, #f0f4fa 100%);
+            margin: 0;
+            padding: 0;
+        }
 
-.title img { width:70px; height:70px; border-radius:50%; margin-bottom:8px; }
-.container { max-width:1000px; margin:24px auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px; }
+        .container {
+            max-width: 600px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(46, 92, 154, 0.10);
+            padding: 32px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-.modal-close { float:right; font-size:1.5rem; cursor:pointer; }
-</style>
+        h1 {
+            color: #2e5c9a;
+            margin-bottom: 18px;
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .slide-container {
+            width: 100%;
+            max-width: 500px;
+            height: 320px;
+            background: linear-gradient(120deg, #dde6f7 60%, #e3ecfa 100%);
+            border-radius: 18px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(46, 92, 154, 0.10);
+            position: relative;
+        }
+
+        .slide-img {
+            width: 92%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(46, 92, 154, 0.10);
+            margin-bottom: 14px;
+            border: 2px solid #2e5c9a22;
+            cursor: zoom-in;
+        }
+
+        .slide-btn {
+            background: #2e5c9a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 22px;
+            margin: 0 10px;
+            font-size: 1.08rem;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(46, 92, 154, 0.07);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .slide-btn:hover {
+            background: #184075;
+            transform: scale(1.07);
+        }
+
+        .title {
+            text-align: center;
+            background: linear-gradient(90deg, #2e5c9a 60%, #184075 100%);
+            color: white;
+            padding: 18px 0 10px 0;
+            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10);
+            border-radius: 0 0 18px 18px;
+        }
+
+        .title img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.10);
+        }
+
+        .atividade-box {
+            background: #e3ecfa;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(46, 92, 154, 0.08);
+            padding: 22px 28px;
+            margin: 24px auto 0 auto;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .atividade-titulo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2e5c9a;
+            margin-bottom: 2px;
+        }
+
+        .atividade-descricao {
+            font-size: 1.08rem;
+            color: #184075;
+        }
+
+        .atividade-exemplo {
+            font-size: 1.05rem;
+            color: #2e5c9a;
+            background: #dde6f7;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-top: 6px;
+        }
+
+        .mistica {
+            background: linear-gradient(90deg, #e3ecfa 60%, #dde6f7 100%);
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 24px;
+            color: #2e5c9a;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07);
+            transition: background 0.5s;
+            cursor: default;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        .card {
+            background: #dde6f7;
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(46, 92, 154, 0.15);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 6px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: #2e5c9a;
+            margin-bottom: 4px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #184075;
+        }
+
+        .modal,
+        .modal-imagem {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(46, 92, 154, 0.45);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.ativo,
+        .modal-imagem.ativo {
+            display: flex;
+        }
+
+        .modal-content,
+        .imagem-ampliada {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            max-width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(46, 92, 154, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 1rem;
+            color: #2e5c9a;
+            margin-top: 40px;
+            margin-bottom: 18px;
+            background: #e3ecfa;
+            border-radius: 8px;
+            padding: 10px 0;
+            box-shadow: 0 1px 6px rgba(46, 92, 154, 0.07);
+        }
+
+        .title img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 24px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .modal-close {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .ub {
+            display: none;
+        }
+
+        .bu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin-top: 24px;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="title">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
-</div>
+    <div class="title">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
+    </div>
 
-<div class="container" style="max-width:600px; margin:32px auto; background:#fff; border-radius:16px; box-shadow:0 4px 24px rgba(46,92,154,0.10); padding:32px 24px 24px 24px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-    <div class="slide-container">
-        <img id="slideImg" class="slide-img" src="https://via.placeholder.com/400x220?text=Imagem+1" alt="Slide" onclick="abrirModalImagem()">
-        <div>
-            <button class="slide-btn" onclick="slideAnterior()">Anterior</button>
-            <button class="slide-btn" onclick="slideProxima()">Próxima</button>
+    <div class="container"
+        style="max-width:600px; margin:32px auto; background:#fff; border-radius:16px; box-shadow:0 4px 24px rgba(46,92,154,0.10); padding:32px 24px 24px 24px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div class="slide-container">
+            <img id="slideImg" class="slide-img" src="https://via.placeholder.com/400x220?text=Imagem+1" alt="Slide"
+                onclick="abrirModalImagem()">
+            <div>
+                <button class="slide-btn" onclick="slideAnterior()">Anterior</button>
+                <button class="slide-btn" onclick="slideProxima()">Próxima</button>
+            </div>
+        </div>
+
+        <div class="atividade-box">
+            <div class="atividade-titulo">Atividade</div>
+            <div class="atividade-descricao"> Unidade 8 do workbook</div>
+            <!-- <!--         <div class="atividade-exemplo"><strong>Exemplo:</strong> Traduza as palavras do slide.</div> -->
+        </div>
+
+        <div class="mistica" id="misticaBox">Clique abaixo para uma mensagem mística!</div>
+        <button class="slide-btn" style="margin-top:12px;" onclick="misticaMensagem()">Mensagem Mística</button>
+        <button class="slide-btn" style="margin-top:12px;" onclick="aparecer()">Ver/Esconder Cards</button>
+        <div class="card-container" id="cardsContainer"></div>
+    </div>
+
+    <div class="title">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
+        <h1>Estudo de Inglês - 100 Cards</h1>
+    </div>
+    <div class="container" id="cardsContainer"></div>
+
+    <div id="modal" class="modal" onclick="fecharModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="fecharModal()">&times;</span>
+            <div id="modalContent"></div>
         </div>
     </div>
-
-    <div class="atividade-box">
-        <div class="atividade-titulo">Atividade</div>
-        <div class="atividade-descricao"> Unidade 8 do workbook</div>
-<!-- <!--         <div class="atividade-exemplo"><strong>Exemplo:</strong> Traduza as palavras do slide.</div> -->
-    </div> 
-
-    <div class="mistica" id="misticaBox">Clique abaixo para uma mensagem mística!</div>
-    <button class="slide-btn" style="margin-top:12px;" onclick="misticaMensagem()">Mensagem Mística</button>
-
-    <div class="card-container" id="cardsContainer"></div>
-</div>
-
-<div class="title">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.PXyxpk1M_JkrhfVrymnmlQHaHa?pid=Api&P=0&h=150" alt="Logo">
-    <h1>Estudo de Inglês - 100 Cards</h1>
-</div>
-<div class="container" id="cardsContainer"></div>
-
-<div id="modal" class="modal" onclick="fecharModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="fecharModal()">&times;</span>
-        <div id="modalContent"></div>
+    <div id="modalImagem" class="modal-imagem" onclick="fecharModalImagem()">
+        <img id="imagemAmpliada" class="imagem-ampliada" src="" alt="Imagem Ampliada">
     </div>
-</div>
-<div id="modalImagem" class="modal-imagem" onclick="fecharModalImagem()">
-    <img id="imagemAmpliada" class="imagem-ampliada" src="" alt="Imagem Ampliada">
-</div>
 
-<div class="copyright">
-    &copy; 2025 Kaio. Todos os direitos reservados. Proibida a reprodução sem autorização.
-</div>
 
-<script>
-// Slides
-const imagens = [
-    'https://static.vecteezy.com/system/resources/thumbnails/011/334/492/original/animation-loading-circle-loading-animation-on-green-background-free-video.jpg',
-    // '2.jpg'
-];
-let slideAtual = 0;
-function atualizarSlide() { document.getElementById('slideImg').src = imagens[slideAtual]; }
-function slideAnterior() { slideAtual = (slideAtual - 1 + imagens.length) % imagens.length; atualizarSlide(); }
-function slideProxima() { slideAtual = (slideAtual + 1) % imagens.length; atualizarSlide(); }
+    <div class="copyright">
+        &copy; 2025 Kaio. Todos os direitos reservados. Proibida a reprodução sem autorização.
+    </div>
 
-// Mensagem mística
-function misticaMensagem() {
-    const mensagens = [
-        'Acredite no seu potencial!',
-        'O universo conspira a favor dos que se dedicam.',
-        'Cada palavra aprendida é uma porta aberta.',
-        'Seu esforço será recompensado!',
-        'A jornada do inglês é cheia de descobertas místicas.'
-    ];
-    const msg = mensagens[Math.floor(Math.random() * mensagens.length)];
-    const misticaBox = document.getElementById('misticaBox');
-    misticaBox.textContent = msg;
-    misticaBox.style.background = '#d1e7dd';
-    setTimeout(() => misticaBox.style.background = '#e3ecfa', 1500);
-}
+    <script>
+        // Slides
+        const imagens = [
+            'https://static.vecteezy.com/system/resources/thumbnails/011/334/492/original/animation-loading-circle-loading-animation-on-green-background-free-video.jpg',
+            // '2.jpg'
+        ];
+        let slideAtual = 0;
+        function atualizarSlide() { document.getElementById('slideImg').src = imagens[slideAtual]; }
+        function slideAnterior() { slideAtual = (slideAtual - 1 + imagens.length) % imagens.length; atualizarSlide(); }
+        function slideProxima() { slideAtual = (slideAtual + 1) % imagens.length; atualizarSlide(); }
 
-// Modal de cards
-function abrirModal(conteudo) { document.getElementById('modalContent').innerHTML = conteudo; document.getElementById('modal').classList.add('ativo'); }
-function fecharModal() { document.getElementById('modal').classList.remove('ativo'); }
-
-// Modal de imagem
-function abrirModalImagem() { 
-    document.getElementById('imagemAmpliada').src = document.getElementById('slideImg').src; 
-    document.getElementById('modalImagem').classList.add('ativo'); 
-}
-function fecharModalImagem() { document.getElementById('modalImagem').classList.remove('ativo'); }
-
-// Lista de 100 temas importantes
-let temas = [
-  // Grammar
-  {word:'Present Continuous', tipo:'Grammar'},
-  {word:'Past Continuous', tipo:'Grammar'},
-  {word:'Future Continuous', tipo:'Grammar'},
-  {word:'Present Perfect', tipo:'Grammar'},
-  {word:'Past Perfect', tipo:'Grammar'},
-  {word:'Future Perfect', tipo:'Grammar'},
-  {word:'Present Perfect Continuous', tipo:'Grammar'},
-  {word:'Past Perfect Continuous', tipo:'Grammar'},
-  {word:'Future Perfect Continuous', tipo:'Grammar'},
-  {word:'Passive Voice', tipo:'Grammar'},
-  {word:'Reported Speech', tipo:'Grammar'},
-  {word:'Conditionals Type 0', tipo:'Grammar'},
-  {word:'Conditionals Type 1', tipo:'Grammar'},
-  {word:'Conditionals Type 2', tipo:'Grammar'},
-  {word:'Conditionals Type 3', tipo:'Grammar'},
-  {word:'Articles', tipo:'Grammar'},
-  {word:'Prepositions', tipo:'Grammar'},
-
-  // Vocabulary
-  {word:'Food', tipo:'Vocabulary'},
-  {word:'Animals', tipo:'Vocabulary'},
-  {word:'Clothing', tipo:'Vocabulary'},
-  {word:'Weather', tipo:'Vocabulary'},
-  {word:'Transportation', tipo:'Vocabulary'},
-  {word:'House', tipo:'Vocabulary'},
-  {word:'School', tipo:'Vocabulary'},
-  {word:'Jobs', tipo:'Vocabulary'},
-  {word:'Family', tipo:'Vocabulary'},
-  {word:'Colors', tipo:'Vocabulary'},
-  {word:'Numbers', tipo:'Vocabulary'},
-  {word:'Days of the Week', tipo:'Vocabulary'},
-  {word:'Months', tipo:'Vocabulary'},
-  {word:'Emotions', tipo:'Vocabulary'},
-  {word:'Sports', tipo:'Vocabulary'},
-  {word:'Body Parts', tipo:'Vocabulary'},
-  {word:'Countries', tipo:'Vocabulary'},
-  {word:'Cities', tipo:'Vocabulary'},
-  {word:'Technology', tipo:'Vocabulary'},
-  {word:'Nature', tipo:'Vocabulary'},
-
-  // Idioms / Expressions
-  {word:'Break the ice', tipo:'Idioms'},
-  {word:'Piece of cake', tipo:'Idioms'},
-  {word:'Hit the sack', tipo:'Idioms'},
-  {word:'Let the cat out of the bag', tipo:'Idioms'},
-  {word:'Once in a blue moon', tipo:'Idioms'},
-  {word:'Costs an arm and a leg', tipo:'Idioms'},
-  {word:'Bite the bullet', tipo:'Idioms'},
-  {word:'Cutting corners', tipo:'Idioms'},
-  {word:'On cloud nine', tipo:'Idioms'},
-  {word:'Under the weather', tipo:'Idioms'},
-
-  // Phrasal Verbs
-  {word:'Look up', tipo:'Phrasal Verbs'},
-  {word:'Get along', tipo:'Phrasal Verbs'},
-  {word:'Give up', tipo:'Phrasal Verbs'},
-  {word:'Run into', tipo:'Phrasal Verbs'},
-  {word:'Take off', tipo:'Phrasal Verbs'},
-  {word:'Put off', tipo:'Phrasal Verbs'},
-  {word:'Carry on', tipo:'Phrasal Verbs'},
-  {word:'Check out', tipo:'Phrasal Verbs'},
-  {word:'Come across', tipo:'Phrasal Verbs'},
-  {word:'Hold on', tipo:'Phrasal Verbs'},
-
-  // Useful Phrases
-  {word:'How are you?', tipo:'Phrases'},
-  {word:'Nice to meet you', tipo:'Phrases'},
-  {word:'I don’t understand', tipo:'Phrases'},
-  {word:'Can you help me?', tipo:'Phrases'},
-  {word:'What time is it?', tipo:'Phrases'},
-  {word:'I’m hungry', tipo:'Phrases'},
-  {word:'I’m tired', tipo:'Phrases'},
-  {word:'I love you', tipo:'Phrases'},
-  {word:'See you later', tipo:'Phrases'},
-  {word:'Have a nice day', tipo:'Phrases'},
-
-  // Adjectives
-  {word:'Beautiful', tipo:'Adjectives'},
-  {word:'Happy', tipo:'Adjectives'},
-  {word:'Sad', tipo:'Adjectives'},
-  {word:'Big', tipo:'Adjectives'},
-  {word:'Small', tipo:'Adjectives'},
-  {word:'Fast', tipo:'Adjectives'},
-  {word:'Slow', tipo:'Adjectives'},
-  {word:'Hot', tipo:'Adjectives'},
-  {word:'Cold', tipo:'Adjectives'},
-  {word:'Interesting', tipo:'Adjectives'},
-
-  // Verbs
-  {word:'Go', tipo:'Verbs'},
-  {word:'Come', tipo:'Verbs'},
-  {word:'Eat', tipo:'Verbs'},
-  {word:'Drink', tipo:'Verbs'},
-  {word:'Read', tipo:'Verbs'},
-  {word:'Write', tipo:'Verbs'},
-  {word:'Speak', tipo:'Verbs'},
-  {word:'Listen', tipo:'Verbs'},
-  {word:'Run', tipo:'Verbs'},
-  {word:'Walk', tipo:'Verbs'},
-
-  // General Topics
-  {word:'School subjects', tipo:'General Topics'},
-  {word:'Hobbies', tipo:'General Topics'},
-  {word:'Shopping', tipo:'General Topics'},
-  {word:'Health', tipo:'General Topics'},
-  {word:'Travel', tipo:'General Topics'},
-  {word:'Movies', tipo:'General Topics'},
-  {word:'Music', tipo:'General Topics'},
-  {word:'Books', tipo:'General Topics'},
-  {word:'Internet', tipo:'General Topics'},
-  {word:'Culture', tipo:'General Topics'},
-
-  // More Phrases
-  {word:'Excuse me', tipo:'Phrases'},
-  {word:'I’m sorry', tipo:'Phrases'},
-  {word:'Thank you', tipo:'Phrases'},
-  {word:'You’re welcome', tipo:'Phrases'},
-  {word:'No problem', tipo:'Phrases'},
-  {word:'Good morning', tipo:'Phrases'},
-  {word:'Good night', tipo:'Phrases'},
-  {word:'See you soon', tipo:'Phrases'},
-  {word:'Take care', tipo:'Phrases'},
-  {word:'Happy birthday', tipo:'Phrases'}
-];
-
-// Manual explanations
-const explanations = {
-    'Past Simple':'Verb tense used for completed actions in the past.',
-    'Present Simple':'Used for habits, general facts and universal truths.',
-    'Future Simple':'Used for future actions.',
-    'Present Continuous':'Used for actions happening right now.',
-    'Past Continuous':'Used for ongoing actions in the past.',
-    'Future Continuous':'Used for ongoing actions in the future.',
-    'Present Perfect':'Past actions with a connection to the present.',
-    'Past Perfect':'Actions completed before another past action.',
-    'Future Perfect':'Actions that will be completed in the future.',
-    'Passive Voice':'Structure of the passive voice.',
-    'Reported Speech':'Indirect speech.',
-    'Conditionals Type 0':'Real and general conditions.',
-    'Conditionals Type 1':'Real future situations.',
-    'Conditionals Type 2':'Hypothetical present/future situations.',
-    'Conditionals Type 3':'Hypothetical past situations.'
-};
-
-// Criar cards
-async function criarCards(temas){
-    const container=document.getElementById('cardsContainer');
-    container.innerHTML='';
-    for(const obj of temas){
-        const card=document.createElement('div'); card.className='card';
-        card.innerHTML=`<div class="card-title">${obj.word}</div><div class="card-desc">${obj.tipo}</div>`;
-        card.onclick=()=>buscarDefinicao(obj.word,obj.tipo);
-        container.appendChild(card);
-    }
-}
-
-// Buscar definição ou usar explicação manual
-async function buscarDefinicao(palavra,tipo){
-    try {
-        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${palavra}`);
-        const data = await res.json();
-        if(data[0] && data[0].meanings){
-            let defs = data[0].meanings.map(m => m.definitions[0].definition).join('<br>');
-            let exemplos = data[0].meanings.map(m => m.definitions[0].example).filter(e => e).join('<br>');
-            abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${defs}<br>${exemplos}`);
-        } else {
-            abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${explicacoes[palavra] || 'Definição não encontrada.'}`);
+        // Mensagem mística
+        function misticaMensagem() {
+            const mensagens = [
+                'Acredite no seu potencial!',
+                'O universo conspira a favor dos que se dedicam.',
+                'Cada palavra aprendida é uma porta aberta.',
+                'Seu esforço será recompensado!',
+                'A jornada do inglês é cheia de descobertas místicas.'
+            ];
+            const msg = mensagens[Math.floor(Math.random() * mensagens.length)];
+            const misticaBox = document.getElementById('misticaBox');
+            misticaBox.textContent = msg;
+            misticaBox.style.background = '#d1e7dd';
+            setTimeout(() => misticaBox.style.background = '#e3ecfa', 1500);
         }
-    } catch(e){
-        abrirModal(`<strong>${palavra}</strong> (${tipo})<br>Erro ao buscar definição.`);
-    }
-}
 
-// Modal
-function abrirModal(conteudo){
-    document.getElementById('modalContent').innerHTML=conteudo;
-    document.getElementById('modal').classList.add('ativo');
-}
-function fecharModal(){ document.getElementById('modal').classList.remove('ativo'); }
+        function aparecer() {
+            if (document.getElementById("cardsContainer").className == "ub") {
+                document.getElementById("cardsContainer").className = "bu";
+            }
+            else {
+                document.getElementById("cardsContainer").className = "ub";
+            }
+        }
 
-// Inicializa
-criarCards(temas);
-</script>
+        // Modal de cards
+        function abrirModal(conteudo) { document.getElementById('modalContent').innerHTML = conteudo; document.getElementById('modal').classList.add('ativo'); }
+        function fecharModal() { document.getElementById('modal').classList.remove('ativo'); }
+
+        // Modal de imagem
+        function abrirModalImagem() {
+            document.getElementById('imagemAmpliada').src = document.getElementById('slideImg').src;
+            document.getElementById('modalImagem').classList.add('ativo');
+        }
+        function fecharModalImagem() { document.getElementById('modalImagem').classList.remove('ativo'); }
+
+
+        // Lista de 100 temas importantes
+        let temas = [
+            // Grammar
+            { word: 'Present Continuous', tipo: 'Grammar' },
+            { word: 'Past Continuous', tipo: 'Grammar' },
+            { word: 'Future Continuous', tipo: 'Grammar' },
+            { word: 'Present Perfect', tipo: 'Grammar' },
+            { word: 'Past Perfect', tipo: 'Grammar' },
+            { word: 'Future Perfect', tipo: 'Grammar' },
+            { word: 'Present Perfect Continuous', tipo: 'Grammar' },
+            { word: 'Past Perfect Continuous', tipo: 'Grammar' },
+            { word: 'Future Perfect Continuous', tipo: 'Grammar' },
+            { word: 'Passive Voice', tipo: 'Grammar' },
+            { word: 'Reported Speech', tipo: 'Grammar' },
+            { word: 'Conditionals Type 0', tipo: 'Grammar' },
+            { word: 'Conditionals Type 1', tipo: 'Grammar' },
+            { word: 'Conditionals Type 2', tipo: 'Grammar' },
+            { word: 'Conditionals Type 3', tipo: 'Grammar' },
+            { word: 'Articles', tipo: 'Grammar' },
+            { word: 'Prepositions', tipo: 'Grammar' },
+
+            // Vocabulary
+            { word: 'Food', tipo: 'Vocabulary' },
+            { word: 'Animals', tipo: 'Vocabulary' },
+            { word: 'Clothing', tipo: 'Vocabulary' },
+            { word: 'Weather', tipo: 'Vocabulary' },
+            { word: 'Transportation', tipo: 'Vocabulary' },
+            { word: 'House', tipo: 'Vocabulary' },
+            { word: 'School', tipo: 'Vocabulary' },
+            { word: 'Jobs', tipo: 'Vocabulary' },
+            { word: 'Family', tipo: 'Vocabulary' },
+            { word: 'Colors', tipo: 'Vocabulary' },
+            { word: 'Numbers', tipo: 'Vocabulary' },
+            { word: 'Days of the Week', tipo: 'Vocabulary' },
+            { word: 'Months', tipo: 'Vocabulary' },
+            { word: 'Emotions', tipo: 'Vocabulary' },
+            { word: 'Sports', tipo: 'Vocabulary' },
+            { word: 'Body Parts', tipo: 'Vocabulary' },
+            { word: 'Countries', tipo: 'Vocabulary' },
+            { word: 'Cities', tipo: 'Vocabulary' },
+            { word: 'Technology', tipo: 'Vocabulary' },
+            { word: 'Nature', tipo: 'Vocabulary' },
+
+            // Idioms / Expressions
+            { word: 'Break the ice', tipo: 'Idioms' },
+            { word: 'Piece of cake', tipo: 'Idioms' },
+            { word: 'Hit the sack', tipo: 'Idioms' },
+            { word: 'Let the cat out of the bag', tipo: 'Idioms' },
+            { word: 'Once in a blue moon', tipo: 'Idioms' },
+            { word: 'Costs an arm and a leg', tipo: 'Idioms' },
+            { word: 'Bite the bullet', tipo: 'Idioms' },
+            { word: 'Cutting corners', tipo: 'Idioms' },
+            { word: 'On cloud nine', tipo: 'Idioms' },
+            { word: 'Under the weather', tipo: 'Idioms' },
+
+            // Phrasal Verbs
+            { word: 'Look up', tipo: 'Phrasal Verbs' },
+            { word: 'Get along', tipo: 'Phrasal Verbs' },
+            { word: 'Give up', tipo: 'Phrasal Verbs' },
+            { word: 'Run into', tipo: 'Phrasal Verbs' },
+            { word: 'Take off', tipo: 'Phrasal Verbs' },
+            { word: 'Put off', tipo: 'Phrasal Verbs' },
+            { word: 'Carry on', tipo: 'Phrasal Verbs' },
+            { word: 'Check out', tipo: 'Phrasal Verbs' },
+            { word: 'Come across', tipo: 'Phrasal Verbs' },
+            { word: 'Hold on', tipo: 'Phrasal Verbs' },
+
+            // Useful Phrases
+            { word: 'How are you?', tipo: 'Phrases' },
+            { word: 'Nice to meet you', tipo: 'Phrases' },
+            { word: 'I don’t understand', tipo: 'Phrases' },
+            { word: 'Can you help me?', tipo: 'Phrases' },
+            { word: 'What time is it?', tipo: 'Phrases' },
+            { word: 'I’m hungry', tipo: 'Phrases' },
+            { word: 'I’m tired', tipo: 'Phrases' },
+            { word: 'I love you', tipo: 'Phrases' },
+            { word: 'See you later', tipo: 'Phrases' },
+            { word: 'Have a nice day', tipo: 'Phrases' },
+
+            // Adjectives
+            { word: 'Beautiful', tipo: 'Adjectives' },
+            { word: 'Happy', tipo: 'Adjectives' },
+            { word: 'Sad', tipo: 'Adjectives' },
+            { word: 'Big', tipo: 'Adjectives' },
+            { word: 'Small', tipo: 'Adjectives' },
+            { word: 'Fast', tipo: 'Adjectives' },
+            { word: 'Slow', tipo: 'Adjectives' },
+            { word: 'Hot', tipo: 'Adjectives' },
+            { word: 'Cold', tipo: 'Adjectives' },
+            { word: 'Interesting', tipo: 'Adjectives' },
+
+            // Verbs
+            { word: 'Go', tipo: 'Verbs' },
+            { word: 'Come', tipo: 'Verbs' },
+            { word: 'Eat', tipo: 'Verbs' },
+            { word: 'Drink', tipo: 'Verbs' },
+            { word: 'Read', tipo: 'Verbs' },
+            { word: 'Write', tipo: 'Verbs' },
+            { word: 'Speak', tipo: 'Verbs' },
+            { word: 'Listen', tipo: 'Verbs' },
+            { word: 'Run', tipo: 'Verbs' },
+            { word: 'Walk', tipo: 'Verbs' },
+
+            // General Topics
+            { word: 'School subjects', tipo: 'General Topics' },
+            { word: 'Hobbies', tipo: 'General Topics' },
+            { word: 'Shopping', tipo: 'General Topics' },
+            { word: 'Health', tipo: 'General Topics' },
+            { word: 'Travel', tipo: 'General Topics' },
+            { word: 'Movies', tipo: 'General Topics' },
+            { word: 'Music', tipo: 'General Topics' },
+            { word: 'Books', tipo: 'General Topics' },
+            { word: 'Internet', tipo: 'General Topics' },
+            { word: 'Culture', tipo: 'General Topics' },
+
+            // More Phrases
+            { word: 'Excuse me', tipo: 'Phrases' },
+            { word: 'I’m sorry', tipo: 'Phrases' },
+            { word: 'Thank you', tipo: 'Phrases' },
+            { word: 'You’re welcome', tipo: 'Phrases' },
+            { word: 'No problem', tipo: 'Phrases' },
+            { word: 'Good morning', tipo: 'Phrases' },
+            { word: 'Good night', tipo: 'Phrases' },
+            { word: 'See you soon', tipo: 'Phrases' },
+            { word: 'Take care', tipo: 'Phrases' },
+            { word: 'Happy birthday', tipo: 'Phrases' }
+        ];
+
+        // Manual explanations
+        const explanations = {
+            'Past Simple': 'Verb tense used for completed actions in the past.',
+            'Present Simple': 'Used for habits, general facts and universal truths.',
+            'Future Simple': 'Used for future actions.',
+            'Present Continuous': 'Used for actions happening right now.',
+            'Past Continuous': 'Used for ongoing actions in the past.',
+            'Future Continuous': 'Used for ongoing actions in the future.',
+            'Present Perfect': 'Past actions with a connection to the present.',
+            'Past Perfect': 'Actions completed before another past action.',
+            'Future Perfect': 'Actions that will be completed in the future.',
+            'Passive Voice': 'Structure of the passive voice.',
+            'Reported Speech': 'Indirect speech.',
+            'Conditionals Type 0': 'Real and general conditions.',
+            'Conditionals Type 1': 'Real future situations.',
+            'Conditionals Type 2': 'Hypothetical present/future situations.',
+            'Conditionals Type 3': 'Hypothetical past situations.'
+        };
+
+        // Criar cards
+        async function criarCards(temas) {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+            for (const obj of temas) {
+                const card = document.createElement('div'); card.className = 'card';
+                card.innerHTML = `<div class="card-title">${obj.word}</div><div class="card-desc">${obj.tipo}</div>`;
+                card.onclick = () => buscarDefinicao(obj.word, obj.tipo);
+                container.appendChild(card);
+            }
+        }
+
+        // Buscar definição ou usar explicação manual
+        async function buscarDefinicao(palavra, tipo) {
+            try {
+                const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${palavra}`);
+                const data = await res.json();
+                if (data[0] && data[0].meanings) {
+                    let defs = data[0].meanings.map(m => m.definitions[0].definition).join('<br>');
+                    let exemplos = data[0].meanings.map(m => m.definitions[0].example).filter(e => e).join('<br>');
+                    abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${defs}<br>${exemplos}`);
+                } else {
+                    abrirModal(`<strong>${palavra}</strong> (${tipo})<br>${explicacoes[palavra] || 'Definição não encontrada.'}`);
+                }
+            } catch (e) {
+                abrirModal(`<strong>${palavra}</strong> (${tipo})<br>Erro ao buscar definição.`);
+            }
+        }
+
+        // Modal
+        function abrirModal(conteudo) {
+            document.getElementById('modalContent').innerHTML = conteudo;
+            document.getElementById('modal').classList.add('ativo');
+        }
+        function fecharModal() { document.getElementById('modal').classList.remove('ativo'); }
+
+        // Inicializa
+        criarCards(temas);
+    </script>
 
 </body>
+
 </html>
-
-
-
-
